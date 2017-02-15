@@ -1,0 +1,542 @@
+    1  ls desktop
+    2  ls Desktop
+    3  curl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/setupg31 | bash
+    4  cp Desktop/source.cpp
+    5  cp Desktop/source.cpp
+    6  cp Desktop/Source.cpp
+    7  cp Desktop\Source.cpp
+    8  cp Desktop/Source.cpp
+    9  cp Desktop/Source.cpp .
+   10  ls
+   11  -g31 -o week2 Source.cpp
+   12  g31 -o week2 Source.cpp
+   13  week2
+   14  ./week2
+   15  exit
+   16  ./license.cpp
+   17  International Golf Club Dubai
+   18  55
+   19  ./license.cpp
+   20  ./license.cpp
+   21  ./license.cpp
+   22  ./license.cpp
+   23  curl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/p2tester | bash
+   24  ./license.cpp
+   25  ./license.cpp
+   26  curl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/p2tester | bash
+   27  g31 -o license.cpp Source.cpp
+   28  cp Desktop/Source.cpp
+   29  cp Desktop/Source.cpp .
+   30  ls
+   31  g31 -o license.cpp Source.cpp
+   32  ./license.cpp
+   33  cp Desktop/Source.cpp .
+   34  ls
+   35  g31 -o License.cpp Source.cpp
+   36  License.cpp
+   37  ./License.cpp
+   38  g31 -o license.cpp Source.cpp
+   39  curl -s -L http://cs.ucla.edu/fall16/cs31/Utilities/p2tester | bash
+   40  curl -s -L http://cs.ucla.edu/fall16/cs31/Utilities/p2tester | bash
+   41  license.cpp
+   42  ./license.cpp
+   43  curl -s -L http://cs.ucla.edu/fall16/cs31/Utilities/p2tester | bash
+   44  g31 -o license.cpp Source.cpp
+   45  curl -s -L http://cs.ucla.edu/fall16/cs31/Utilities/p2tester | bash
+   46  g31 -o license.cpp Source.cpp
+   47  curl -s -L http://cs.ucla.edu/fall16/cs31/Utilities/p2tester | bash
+   48  g31 -o license.cpp Source.cpp
+   49  ./license.cpp
+   50  -
+   51  curl -s -L http://cs.ucla.edu/fall16/cs31/Utilities/p2tester | bash
+   52  curl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/p2tester | bash
+   53  curl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/p2tester | bash
+   54  g31 -o license.cpp Source.cpp
+   55  ls
+   56  license.cpp
+   57  ./license.cpp
+   58  curl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/setupg31 | bash
+   59  ls Desktop
+   60  curl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/p2tester | nash
+   61  curl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/p2tester | bash
+   62  PuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTYPuTTY
+   63  curl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/p2tester | bash
+   64  curl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/p2tester | bash
+   65  cd Desktop/
+   66  g31 Source.cpp -o source
+   67  source
+   68  ./source
+   69  cd cs-31/
+   70  curl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/p2tester | bash
+   71  curl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/p2tester | bash
+   72  g31 -o poll poll.cpp
+   73  ls desktop
+   74  ls
+   75  ls Desktop
+   76  g31 -o poll poll.cpp
+   77  cp Desktop/poll.cpp
+   78  cp Desktop/poll.cpp .
+   79  ls
+   80  g31 -o poll poll.cpp
+   81  cp Desktop/poll.cpp .
+   82  g31 -o poll poll.cpp
+   83  ./poll
+   84  curl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/p3tester | bash
+   85  cp Desktop/poll.cpp .
+   86  g31 -o poll poll.cpp
+   87  curl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/p3tester | bash
+   88  cp Desktop/poll.cpp .
+   89  g31 -o poll poll.cpp
+   90  curl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/p3tester | bash
+   91  cp Desktop/satisfy.cpp .
+   92  g31 -o satisfy/satisfy.cpp
+   93  g31 -o satisfy satisfy.cpp
+   94  satisfy
+   95  ./satisfy
+   96  curl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/p5tester | bashcurl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/p5tester | bash
+   97  curl -s -L http://cs.ucla.edu/classes/fall16/cs31/Utilities/p5tester | bash
+   98  ls Desktop
+   99  cp Desktop/rats.cpp .
+  100  g31 -o rats rats.cpp
+  101  rats
+  102  ./rats
+  103  ssh grovea@lnxsrv.seas.ucla.edu
+  104  clear
+  105  cat /etc/*release(
+  106  cat /etc/*release*
+  107  ssh grovea@lnxsrv09.seas.ucla.edu
+  108  clear
+  109  pwd
+  110  ls ..
+  111  ls ../..
+  112  ls
+  113  ls ../..
+  114  ls file.txt
+  115  ls /u/cs/
+  116  ls ../..
+  117  ls /u/cs
+  118  ls /u/cs/ugrad
+  119  command
+  120  history
+  121  ;s
+  122  clear
+  123  ls
+  124  mkdir HW1
+  125  cd HW/
+  126  cs /HW
+  127  cd
+  128  cd HW1/
+  129  ~
+  130  cat
+  131  ls
+  132  ls ..
+  133  cwd
+  134  pwd
+  135  cs HW1/
+  136  cd  HW1/
+  137  mvls
+  138  ls
+  139  ls
+  140  history > file.txt
+  141  vim file.txt
+  142  cd /HW1
+  143  cd HW1/
+  144  whoami
+  145  kill
+  146  emacs
+  147  emacs
+  148  cd HW1/
+  149  emacs
+  150  emacs
+  151  clear
+  152  pwed
+  153  pwd
+  154  ls
+  155  cd
+  156  pwd
+  157  clear
+  158  man
+  159  man man
+  160  l
+  161  k
+  162  a
+  163  b
+  164  c
+  165  d
+  166  e
+  167  f
+  168  g
+  169  h
+  170  i
+  171  j
+  172  k
+  173  l
+  174  m
+  175  n
+  176  o
+  177  p
+  178  q
+  179  r
+  180  s
+  181  t
+  182  u
+  183  v
+  184  w
+  185  man w
+  186  k
+  187  x
+  188  y
+  189  z
+  190  emacs
+  191  pwd
+  192  ls
+  193  cwd /u/
+  194  cd /w
+  195  cd /u
+  196  pwd
+  197  ls
+  198  cd cs/ugrad
+  199  pwd
+  200  ls
+  201  pwd/grovea
+  202  pwd/andrew
+  203  cd grovea
+  204  ls
+  205  a
+  206  b
+  207  c
+  208  d
+  209  e
+  210  f
+  211  g
+  212  h
+  213  i
+  214  j
+  215  k
+  216  l
+  217  m
+  218  n
+  219  o
+  220  p
+  221  q
+  222  r
+  223  s
+  224  t
+  225  u
+  226  v
+  227  w
+  228  x
+  229  y
+  230  z
+  231  find -ctime -21
+  232  .
+  233  ./Desktop
+  234  ./Desktop/$RECYCLE.BIN
+  235  ./Desktop/$RECYCLE.BIN/desktop.ini
+  236  ./Documents/$RECYCLE.BIN
+  237  ./Downloads/$RECYCLE.BIN
+  238  ./.cache/abrt
+  239  ./.cache/abrt/lastnotification
+  240  ./.bash_history
+  241  ./.ssh
+  242  ./.ssh/known_hosts
+  243  ./HW1
+  244  ./HW1/file.txt
+  245  ./HW1/.file.txt.swp
+  246  ./HW1/.#*scratch
+  247  ./HW1/#*scratch#
+  248  ./.viminfo
+  249  ./.emacs.d
+  250  ./.emacs.d/auto-save-list
+  251  ./.emacs.d/auto-save-list/.saves-30884-lnxsrv09.seas.ucla.edu~
+  252  .
+  253  ./Desktop
+  254  ./Desktop/$RECYCLE.BIN
+  255  ./Desktop/$RECYCLE.BIN/desktop.ini
+  256  ./Documents/$RECYCLE.BIN
+  257  ./Downloads/$RECYCLE.BIN
+  258  ./.cache/abrt
+  259  ./.cache/abrt/lastnotification
+  260  ./.bash_history
+  261  ./.ssh
+  262  ./.ssh/known_hosts
+  263  ./HW1
+  264  ./HW1/file.txt
+  265  ./HW1/.file.txt.swp
+  266  ./HW1/.#*scratch
+  267  ./HW1/#*scratch#
+  268  ./.viminfo
+  269  ./.emacs.d
+  270  ./.emacs.d/auto-save-list
+  271  ./.emacs.d/auto-save-list/.saves-30884-lnxsrv09.seas.ucla.edu~
+  272  find -ctime -21
+  273  .
+  274  ./Desktop
+  275  ./Desktop/$RECYCLE.BIN
+  276  ./Desktop/$RECYCLE.BIN/desktop.ini
+  277  ./Documents/$RECYCLE.BIN
+  278  ./Downloads/$RECYCLE.BIN
+  279  ./.cache/abrt
+  280  ./.cache/abrt/lastnotification
+  281  ./.bash_history
+  282  ./.ssh
+  283  ./.ssh/known_hosts
+  284  ./HW1
+  285  ./HW1/file.txt
+  286  ./HW1/.file.txt.swp
+  287  ./HW1/.#*scratch
+  288  ./HW1/#*scratch#
+  289  ./.viminfo
+  290  ./.emacs.d
+  291  ./.emacs.d/auto-save-list
+  292  ./.emacs.d/auto-save-list/.saves-30884-lnxsrv09.seas.ucla.edu~
+  293  W1/.#*scratch: No such file or directory
+  294  [grovea@lnxsrv09 ~]$ ./HW1/#*scratch#
+  295  -bash: ./HW1/#*scratch#: Permission denied
+  296  [grovea@lnxsrv09 ~]$ ./.viminfo
+  297  -bash: ./.viminfo: Permission denied
+  298  [grovea@lnxsrv09 ~]$ ./.emacs.d
+  299  -bash: ./.emacs.d: Is a directory
+  300  [grovea@lnxsrv09 ~]$ ./.emacs.d/auto-save-list ./HW1/#*scratch#: Permission denied
+  301  -bash: -bash:: command not found
+  302  [grovea@lnxsrv09 ~]$ [grovea@lnxsrv09 ~]$ ./.viminfo
+  303  -bash: [grovea@lnxsrv09: command not found
+  304  [grovea@lnxsrv09 ~]$ -bash: ./.viminfo: Permission denied
+  305  -bash: -bash:: command not fou ./HW1/#*scratch#: Permission denied
+  306  -bash: -bash:: command not found
+  307  [grovea@lnxsrv09 ~]$ [grovea@lnxsrv09 ~]$ ./.viminfo
+  308  -bash: [grovea@lnxsrv09: command not found
+  309  [grovea@lnxsrv09 ~]$ -bash: ./.viminfo: Permission denied
+  310  -bash: -bash:: command not fou ./HW1/#*scratch#: Permission denied
+  311  -bash: -bash:: command not found
+  312  [grovea@lnxsrv09 ~]$ [grovea@lnxsrv09 ~]$ ./.viminfo
+  313  -bash: [grovea@lnxsrv09: command not found
+  314  [grovea@lnxsrv09 ~]$ -bash: ./.viminfo: Permission denied
+  315  -bash: -bash:: command not foumand not found
+  316  [grovea@lnxsrv09 ~]$ -bash: [grovea@lnxsrv09: command not found
+  317  -bash: -bash:: command not found
+  318  [grovea@lnxsrv09 ~]$ [grovea@lnxsrv09 ~]$ -bash: ./.viminfo: Permission denied
+  319  -bash: [grovea@lnxsrv09: command not found
+  320  [grovea@lnxsrv09 ~]$ -bash: -bash:: command not fou
+  321  09: command not found
+  322  [grovea@lnxsrv09 ~]$ -bash: [grovea@lnxsrv09: command not found
+  323  -bash: -bash:: command not found
+  324  [grovea@lnxsrv09 ~]$ [grovea@lnxsrv09 ~]$ -bash: -bash:: command not fou
+  325  -bash: [grovea@lnxsrv09: command not found
+  326  [grovea@lnxsrv09 ~]$
+  327  find -ctime -21
+  328  whereis find
+  329  ls /bin/find
+  330  cd /bin/find
+  331  cd bin/find
+  332  cd /bin
+  333  ls -l
+  334  ls --help
+  335  find
+  336  find --help
+  337  man find
+  338  man find -k symbolic
+  339  man find
+  340  find -type l
+  341  ls -l
+  342  find -type l -wc
+  343  find -wc -type l
+  344  find -type l
+  345  find -type l | wc
+  346  pwd
+  347  ls
+  348  cd ~
+  349  pwd
+  350  cd /usr/dir
+  351  cd /usr/lib
+  352  ls
+  353  man ls
+  354  ls --sort=time
+  355  ls -l
+  356  ls -l --sort=time
+  357  ls -lw --sort=time
+  358  ls -lu --sort=time
+  359  msn ls
+  360  msn
+  361  man ls
+  362  dircolors
+  363  ls -l --sort=time
+  364  cd libICE.so.6.3.0
+  365  whatis libIce.so.6.3.0
+  366  who libIce.so.6.3.0
+  367  whatis apr-util-1
+  368  ls libIce.so.6.3.0
+  369  ls libICE.so.6.3.0 
+  370  ls libICE.so.6.3.0 /
+  371  ls libICE.so.6.3.0/
+  372  man locale
+  373  clear
+  374  emacs
+  375  emacs
+  376  emacs
+  377  ls -l /usr/bin
+  378  emacs
+  379  emacs
+  380  ssh
+  381  clear
+  382  emacs
+  383  ~
+  384  ~ .
+  385  ~
+  386  exit
+  387  ls Desktop
+  388  cd Desktop/CS32
+  389  curl -s -L http://cs.ucla.edu/classes/winter17/cs32/Utilities/setupg32 | bash
+  390  cd Desktop/CS32
+  391  unzip -j -a -d HW1 HW1.zip
+  392  cd HW1
+  393  ls
+  394  g32 -o vm *.cpp
+  395  g32 -o vm *.cpp
+  396  vm
+  397  ./vm
+  398  clear
+  399  ls -l
+  400  clear
+  401  ls -l
+  402  mkdir HW2
+  403  HW2
+  404  cd HW22
+  405  cd HW2
+  406  wget http://web.cs.ucla.edu/classes/winter17/cs35L/assign/assign2.html
+  407  ls -l
+  408  emacs assign2.html
+  409  cat assign2.html
+  410  clear
+  411  cat assign2.html |tr -c 'A-Za-z' '[\n*]'
+  412  clear
+  413  cat assign2.html |tr -c 'A-Za-z' '[\n*]'
+  414  cat assign2.html | tr -cs 'A-Za-z' '[\n*]'
+  415  cat assign2.html | tr -cs 'A-Za-z' '[\n*]' | sort
+  416  cat assign2.html | tr -cs 'A-Za-z' '[\n*]' | sort -u
+  417  cat assign2.html | tr -cs 'A-Za-z' '[\n*]' | sort -u | comm - words
+  418  cat assign2.html | tr -cs 'A-Za-z' '[\n*]' | sort -u | comm - words
+  419  man comm
+  420  cat assign2.html | tr -cs 'A-Za-z' '[\n*]' | sort -u | comm - /usr/share/dict/words
+  421  cat assign2.html | tr -cs 'A-Za-z' '[\n*]' | sort -u | comm -23 - /usr/share/dict/words
+  422* cat assign2.html | 
+  423  cat assign2.html | tr -cs 'A-Za-z' '[\n*]' | sort -u | comm -23 - /usr/share/dict/words
+  424  sort -u /usr/share/dict/words > sorted_words.txt > cout
+  425  cat assign2.html | tr -cs 'A-Za-z' '[\n*]' | sort -u | comm -23 - sorted_words.txt > cout
+  426  cat assign2.html | tr -cs 'A-Za-z' '[\n*]' | sort -u | comm - sorted_words.txt > cout
+  427  cat assign2.html | tr -cs 'A-Za-z' '[\n*]' | sort -u | comm -23 - sorted_words
+  428  sort -u /usr/share/dict/words > sorted_words
+  429  cat assign2.html | tr -cs 'A-Za-z' '[\n*]' | sort -u | comm -23 - sorted_words
+  430  cat assign2.html | tr -cs 'A-Za-z' '[\n*]' | sort -u | comm - sorted_words
+  431  cat assign2.html | tr -cs 'A-Za-z' '[\n*]' | sort -u | comm - sorted_words > cout
+  432  cat assign2.html | tr -cs 'A-Za-z' '[\n*]' | sort -u | comm -12 - sorted_words
+  433  cat assign2.html | tr -cs 'A-Za-z' '[\n*]' | sort -u | comm -23 - sorted_words
+  434  wget http://mauimapp.com/moolelo/hwnwdseng.htm
+  435  cat hwnwdseng.htm
+  436  ls
+  437  -rm sorted_words.txt
+  438  rm sorted_words.txt
+  439  cat hwnwdseng.htm | grep td
+  440  cat hwnwdseng.htm | grep td | tr -d "<"
+  441  cat hwnwdseng.htm | grep td | tr -d "<" ">"
+  442  man tr
+  443  cat hwnwdseng.htm | grep td | tr -d "<td>"
+  444  me$echo "<td>hello</td>" | sed "s/<[^>]*>//g"
+  445  echo "<td>hello</td>" | sed "s/<[^>]*>//g"
+  446  man sed
+  447  echo "<td>hello</td>" | sed "s/<[]*>//g"
+  448  echo "<td>hello</td>" | sed "s/<[>]*>//g"
+  449  echo "<td>hello</td>" | sed "s/<[^>]*>//g"
+  450  echo "<td>hello</td>" | sed "s/<*>//g"
+  451  echo "<td>hello</td>" | sed "s/<[^>]*>//g"
+  452  echo "<td>hello</td>" | sed "s/<[^>]>//g"
+  453  echo "<td>hello</td>" | sed "s/<[^>]*>//g"
+  454  echo "<td>hello</td>" | sed "s/<[^>]*//g"
+  455  echo "<td>hello</td>" | sed "s/<[^>]*//g"
+  456  echo "<td>hello</td>" | sed "s/<[]*//g"
+  457  echo "<td>hello</td>" | sed "s/<*//g"
+  458  echo "<td>hello</td>" | sed "s/<[^>]*//g"
+  459  echo "<td>hello</td>" | sed "s/<[^>]*>//g"
+  460  echo "<td>hello</td>" | sed "s/<[^>]*//g"
+  461  echo "<td>hello</td>" | sed "s/<>//g"
+  462  echo "<td>hello</td>" | sed "s/<[^*]*//g"
+  463  echo "<td>hello</td>" | sed "s/<[^>]*//g"
+  464  echo "<td>hello</td>" | sed "s/<[^h]*//g"
+  465  echo "<td>hello</td>" | sed "s/<[^h]*>//g"
+  466  echo "<td>hello</td>" | sed "s/<[^>]*>//g"
+  467  man sed
+  468  echo "<td>hello</td>" | sed "s/<[^e]*>//g"
+  469  echo "<td>hello</td>" | sed "s/<[^l]*>//g"
+  470  echo "<td>hello</td>" | sed "s/<[^l]*//g"
+  471  echo "<td>hello</td>" | sed "s/<[^l]*>//g"
+  472  echo "<td>hello</td>" | sed "s/<*>//g"
+  473  echo "<td>hello</td>" | sed "s/<[^t]*>//g"
+  474  echo "<td>hello</td>" | sed "s/<[^d]*>//g"
+  475  echo "<td>hello</td>" | sed "s/<[^>]*>//g"
+  476  cat hwnwdseng.htm | grep td | sed "s/<[^>]*>//g
+
+
+
+
+
+
+
+  477  cat hwnwdseng.htm | grep td | sed "s/<[^>]*>//g"
+  478  echo -e "0123\n0110\n0321\n1010" | grep -v ".*[^01].*"
+  479  hist >> lab3.txt
+  480  history >> lab3.txt
+  481  ls -l
+  482  cat lab3.txt
+  483  clear
+  484  echo "this excludes all s
+
+
+ing not of 10 char set"
+  485  history
+  486  history >> lab3.txt
+  487  emacs
+  488  emacs
+  489  ./daybreak.sh
+  490  daybreak.sh
+  491  list =ls
+  492  ls -l
+  493  daychecksh
+  494  daycheck.sh
+  495  ./ daycheck.sjh
+  496  ./daycheck.sh
+  497  emacs daycheck.sh
+  498  chmod tx daycheck.sh
+  499  man chmod
+  500  chmod +x daycheck.sh
+  501  daycheck.sh
+  502  ./daycheck.sh
+  503  emacs daycheck.sh
+  504  ./daycheck.sh
+  505  emacs daycheck.sh
+  506  ./daycheck.sh
+  507  emacs daycheck.sh
+  508  emacs daycheck.sh -370
+  509  ./daycheck.sh 300
+  510  ./daycheck.sh 370
+  511  emacs daycheck.sh
+  512  ./daycheck.sh 370
+  513  emacs daycheck.sh
+  514  ./daycheck.sh 370
+  515  ./daycheck.sh
+  516  ./daycheck.sh 370
+  517  emacs lab3demo2.sh
+  518  ./lab3demo2.sh
+  519  chmod +x lab3demo2.sh
+  520  ./lab3demo2.sh
+  521  history >> lab3.txt
+  522  emacs lab3demo3.sh
+  523  chmod +x lab3demo3.sh
+  524  ./lab3demo3.sh
+  525  man mv
+  526  mv daycheck.sh lab3demo1.sh
+  527  ls -l
+  528  -rm daycheck.sh~
+  529  rm daycheck.sh~
+  530  ls -l
+  531  emacs lab3demo3.sh
+  532  history >> lab3.txt

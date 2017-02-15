@@ -1,0 +1,100 @@
+Laboratory:
+
+1. man -K *search term*
+2. /bin/cp and /bin/ls
+3. "l" -- runs the ls program that "lists directory contents"
+   "w" -- shows who is logged on and what they are doing
+4. /etc/alternatives/emacs
+5. g+s:
+   
+   makes it so that a file, for users who are members of the file's group, to 
+   have all files that are created to be utilizing the same permissions as 
+   those that of the directory's group permission.
+
+   o-x:
+   
+   so that users that are neither part of the file's group nor the owner of 
+   said file is unable to execute the given file.
+
+6. find -ctime -21
+7. 	.
+	./Desktop
+	./Desktop/$RECYCLE.BIN
+	./Desktop/$RECYCLE.BIN/desktop.ini
+	./Documents/$RECYCLE.BIN
+	./Downloads/$RECYCLE.BIN
+	./.cache/abrt
+	./.cache/abrt/lastnotification
+	./.bash_history
+	./.ssh
+	./.ssh/known_hosts
+	./HW1
+	./HW1/file.txt
+	./HW1/.file.txt.swp
+	./HW1/.#*scratch
+	./HW1/#*scratch#
+	./.viminfo
+	./.emacs.d
+	./.emacs.d/auto-save-list
+	./.emacs.d/auto-save-list/.saves-30884-lnxsrv09.seas.ucla.edu~
+
+8. 20
+9. libICE.so.6.3.0 
+10. the LC*_ environment variables
+11. Buffer-menu-sort
+    sort-columns
+    sort-fields
+    sort-lines
+    sort-numeric-fields
+    sort-pages
+    sort-paragraphs
+    sort-regexp-fields
+    tabulated-list-col-sort
+    tabulated-list-sort
+
+12. C-M-a :: runs the command beginning-of-defun
+	b :: runs the command backward-sexp
+	c :: runs the command exit-recursive-edit
+	d :: runs the command down-list
+	e :: runs the command move-end-of-line
+	f :: runs the command forward-sexp
+	g :: is undefined
+	h :: runs the command mark-defun
+
+13. runs the command keyboard-quit (deselects any selected text and 
+    interrupts a command like C-x).
+14. pastes a selected text that was previously cut
+15. the default colors that correspond with the type of file are different
+
+Exercise 1:
+
+9. No
+10. Instead of holding down C-n, you can use the search capabilities like C-s or C-r
+    alternatively, you can use C-u *integer* *command* to repeat the same
+    command *integer times*
+
+Exercise 4:
+
+8. 7
+
+Exercise 5:
+
+#include <stdio.h>
+int
+main (void)
+{
+  char n = '\n';
+  char b = '\\';
+  char q = '"';
+  char const *p = "#include <stdio.h>%cint%cmain (void)%c{%c  char n = '%cn';%c  char b = '%c%c';%c  char q = '%c';%c  char const *p = %c%s%c;%c  printf (p, n, n, n, n, b, n, b, b, n, q, n, q, p, q, n, n, n, n);%c  return 0;%c}%c";
+  printf (p, n, n, n, n, b, n, b, b, n, q, n, q, p, q, n, n, n, n);
+  return 0;
+}
+
+Exercise 6:
+
+4. It is incorrect
+5. The output is in the buffer area, rather than the scratch file itself
+6. No. Some numbers are more favored than others, as it is not truly random. 
+Instead, it uses a seed that causes such numbers to appear more often during 
+the early stages of the random generator running

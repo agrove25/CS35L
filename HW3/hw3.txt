@@ -1,0 +1,49 @@
+Questions for Lab3
+
+1. I don't believe it was necessary to remove
+case_long_iso_time_style because the patch removes the only reference
+to it, which is within the for loop. As long as the for loop is
+removed, then I don't think the existance of the
+case_long_iso_time_style has any impact on the running of ls.c
+
+2. There are two downsides that are evident with this format of
+dates. The first, is that for files that are greater than a year old,
+the time is replaced by the year, so users that desire a more detailed
+view on older filews ill be unhappy. Secondly, due to the month naming
+conventions, i.e. Mar or May, users from other countries might not
+understand the dat that is being referred to, as they might not speak
+english. (This is assuming that locale isn't changed, which may play
+an impact on this date system).
+
+3. Python2:
+
+Traceback (most recent call last):
+  File "randline.py", line 70, in <module>
+    main()
+  File "randline.py", line 64, in main
+    sys.stdout.write(generator.chooseline())
+  File "randline.py", line 34, in chooseline
+    return random.choice(self.lines)
+  File "/usr/lib/python2.7/random.py", line 275, in choice
+    return seq[int(self.random() * len(seq))]  # raises IndexError
+       if seq is empty
+IndexError: list index out of range
+
+This occurs because a null file is just that, null. As such, when the
+array self.lines is initialized, its size is 0. This leads to issues
+when the code desires to take a random element from this array, as
+there are no elements for it to choose from, resulting in an
+out-of-range error.
+
+4. Python3:
+
+File "randline.py", line 65
+    except IOError as (errno, strerror):
+
+According to PEP 3110 in the Python3 documentation, this error is due
+to a change in syntax to deal with exceptions. The comma syntax is no
+longer permitted, and instead needs to take the form
+
+except TypeError as exc: (where exc is an exception obejct)
+
+

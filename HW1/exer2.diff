@@ -1,0 +1,23 @@
+15c15
+< <!-- diff，在UNIX系統上的一個工具程式，它可以比較兩個檔案之間的不同。通常它被用來比較同一個檔案，在不同版本間的差異。它可以產生一個擴展名為.diff或.patch的檔案，這個檔案可以被另一個工具程式patch來使用。-->
+---
+> 
+91c91
+< <!-- DELETEME DELETEME DELETEME -->
+---
+> 
+295,297c295
+< <!-- You can learn more about HTML comments at
+< 	<http://en.wikipedia.org/wiki/HTML_comment#Comments>.
+< 	-->
+---
+> 
+334c332
+< <p>should output only a small number of log lines<!---->.</p>
+---
+> <p>should output only a small number of log lines.</p>
+349c347
+< </body></html>
+\ No newline at end of file
+---
+> </body></html>

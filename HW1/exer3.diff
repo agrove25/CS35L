@@ -1,0 +1,34 @@
+--- exer1.html	2017-01-13 10:32:47.849953256 -0800
++++ exer3.html	2017-01-13 12:09:57.848360191 -0800
+@@ -1,12 +1,12 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+ <html><head>
+-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+-<title>Assignment 1. Getting to know your system</title>
++<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
++<title>Assignment 37. Getting to know your system</title>
+ </head>
+ 
+ <body>
+ 
+-<h1>Assignment 1. Getting to know your system</h1>
++<h1>Assignment 37. Getting to know your system</h1>
+ 
+ <p><small>[<a href="http://web.cs.ucla.edu/classes/winter16/cs35L/index.html">35L home</a> &gt; <a href="http://web.cs.ucla.edu/classes/winter16/cs35L/assign.html">assignments</a>]</small></p>
+ 
+@@ -25,6 +25,8 @@
+ submit as part of the assignment.</p>
+ 
+ <ol>
++
++
+ <li>
+ How can you get <samp>man</samp> to print all the commands that have a specific
+ word in their man page (or at least the description part of the
+@@ -346,4 +348,4 @@
+ 
+ 
+ 
+-</body></html>
+\ No newline at end of file
++</body></html>

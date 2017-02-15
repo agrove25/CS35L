@@ -1,0 +1,130 @@
+Assignment 1:
+
+C-x C-f "e x e r 1 . h t m l"
+C-n
+C-n
+C-u 17 C-n
+C-r "H T M L"
+C-s "a r r o w"
+C-u 5 C-b
+M-e
+M-a
+C-u 999 C-p
+
+Assignment 2:
+
+C-x C-f "e x e r 2 . h t m l"
+C-u 15 C-n
+C-u 3 C-k
+C-s "D E L E T E M E"
+M-a
+C-u 3 C-k
+C-s "H T M L _ c o m m e n t"
+M-a
+C-u 6 C-k
+C-s "< ! -"
+C-u 4 C-b
+C-u 8 "Backspace"
+C-x s
+
+Assignment 3:
+
+C-x C-f "e x e r 3 . h t m l"
+C-f "A s s i g n m e n t  1"
+<del> "3 7"
+C-f "A s s i g n m e n t 1"
+<del> "3 7"
+C-r UTF-8
+C-u 5 C-f
+C-u 4 "Backspace"
+"S - A S C I I"
+C-s "< o l >"
+C-f
+<Enter>
+C-x s
+
+Assignment 4:
+
+C-x C-f "e x e r 4 . h t m l"
+C-u 999 C-n
+C-u 8 C-p
+C-u 2 C-f
+C-k
+C-r "s h o u l d SP o u t p u t SP o n l y"
+C-u 3 C-b
+C-k
+C-y
+M-y
+C-s "< ! -"
+C-u 3 C-b
+C-k
+C-u 999 C-b
+C-u 15 C-n
+C-y
+C-u 3 C-b
+C-k
+C-r "L e a r n i n g SP t o SP u s e"
+C-u 2 C-n
+C-y
+C-s "< ! -"
+C-s
+C-u 3 C-b
+C-"SP"
+C-u 3 C-n
+C-u 3 C-b
+C-w
+C-r "S u b m i t"
+C-u 2 C-p
+C-y
+C-f
+C-p
+C-f
+<del>
+C-p
+C-f
+<del>
+C-s "1 5 c 1 5"
+C-u 5 C-p
+C-"SP"
+C-u 999 C-n
+C-w
+C-/
+"<!--"
+C-u 999 C-n
+"-->"
+C-r "< o l >"
+C-r
+C-r
+C-r
+C-r
+C-r
+C-r
+M-% <enter> "< o l >" <enter> "< o l >" <enter> "!"
+
+Assignment 5:
+
+M-x make-directory <enter> "~/junk"
+C-x C-f "~/hello.c"
+<copy the selected C program>
+Right-Click <paste>
+M-x compile
+gcc hello.c
+M-x shell
+./a.out
+C-p
+C-"SP"
+C-b
+C-u 12 C-p
+C-w
+C-x o
+C-y
+
+Assignment 6:
+
+C-x b "*scratch*"
+"(random)" C-j
+"(setq x (random))" C-j
+"(setq y (random))" C-j
+"(setq z (random))" C-j
+(* x y z) C-j
+M-: (* x y z)

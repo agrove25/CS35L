@@ -1,0 +1,60 @@
+Patching the ls command
+
+wget ftp://ftp.gnu.org/gnu/coreutils/coreutils-7.6.tar.gz
+   this downloads the coreutils package from the link provided
+
+tar -zxvf coreutils-7.6.tar.gz
+   this extracts the file
+
+mkdir Coreutilsinstall
+   creates a folder that will later be necessary
+   
+cd coreutils-7.6
+   moves to coreutils-7.6 folder (created in step 2)
+
+emacs INSTALL -nw
+   opens the INSTALL text that explains how to configure the file
+
+./configure --prefix=/home/agrove25/CS35L/HW3/Coreutilsinstall/
+   configures the file, which we learnt in step 5 required the
+   absolute path to another unrelated folder for some reason.
+   This step is necessary to set it up for make, as it builds and
+   customizes the makefile.
+
+make
+   builds the software (automatically runs all, the first rule,
+   and its dependencies)
+
+emacs mypatch -nw
+   creates patch file
+
+(was not able to copy and paste into emacs and have it formatted
+correctly, so I used notepad++ to copy and paste the patch into
+the mypatch file)
+
+patch -p1 <mypatch
+   patched the files that mypatch declared (the file NEWS and src/ls.c)
+
+make
+   rebuilds the software (automatically runs all, the first rule,
+   and its dependencies)
+
+Testing
+
+./ls ../../testFolder -l
+
+     Pre-patch:
+     drwxrwxr-x 2 agrove25 agrove25 4096 2017-01-25 11:17 .
+     drwxrwxr-x 5 agrove25 agrove25 4096 2017-01-29 11:18 ..
+     -rw-rw-r-- 1 agrove25 agrove25    4 2017-01-25 11:16 hi
+     -rw-rw-r-- 1 agrove25 agrove25    4 2005-05-01 00:00 hi2
+
+     Post-patch:
+     drwxrwxr-x 2 agrove25 agrove25 4096 Jan 25 11:17 .
+     drwxrwxr-x 5 agrove25 agrove25 4096 Jan 29 11:02 ..
+     -rw-rw-r-- 1 agrove25 agrove25    4 Jan 25 11:16 hi
+     -rw-rw-r-- 1 agrove25 agrove25    4 May  1  2005 hi2
+
+As we can see, there is an obvious change with the date format between
+the two. The first has the added benefit of displaying the time in
+files one year older, something that the post-patch does not do.

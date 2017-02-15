@@ -1,0 +1,103 @@
+tar -zxvf coreutils-with-bug.tar.gz
+    unpacks the coreutils file
+
+cd coreutils-with-bug
+    changes the directory to the coreutils-with-bug folder
+
+./configure
+    configures the file, setting it up for make
+
+make
+    encounters an error (due to difference in the function "futimens")
+
+wget http://web.cs.ucla.edu/classes/winter17/cs35L/assign/coreutils.diff
+    downloads the patch (named coreutils.diff)
+
+patch p0 <coreutils.diff
+    patches and fixes these errors, along with some others within files:
+       utimens.c
+       utimens.h
+       copy.c
+       tee.c
+       touch.c
+
+./configure
+make
+   remakes the files (which this time, compiles correctly)
+
+cd ..
+mkdir testFolder
+cd testFolder
+touch -d '1918-11-11 11:00 GMT' wwi-armistice
+   creates a file that has a date of 1918
+   
+touch now
+   creates a file with the present date
+   
+sleep 1
+touch now1
+   creates a file with the present date (1 second later from the previous)
+
+cd ..
+coreutils-with-bug/src/ls testFolder -lt
+   realizes there's a bug with the sorting of the dates (the 1918 file is
+   put at the newest point)
+
+emacs coreutils-with-bug/src/ls -nw
+   opens up the coreutils file
+
+C-s qsort (found on line 3034)
+   we look for this method because this is function that will finally sort the input
+   use gdb to find the func parameter
+      open gdb to the corresponding file: gdb ./ls
+      break ls.c:3034
+      run -lt ../../testFolder
+      watch func
+      display func
+      finds the called function "compare_mtime"
+
+C-s compare_mtime (line 2975)
+   finds a called function "cmp_mtime"
+
+C-s cmp_mtime (line 2877)
+   finds a called function "timespec_cmp"
+
+C-s timespec_cmp (n/a)
+   unable to find an implementation for this method
+
+C-x C-c
+   cd coreutils-with-bug
+
+grep timespec_cmp */*.h
+   find an implementation in lib/timespec.h
+
+emacs lib/timespec.h -nw
+   find a possible error within the timespec.h, where they utilize subtraction.
+   this could possibly result in an integer overflow, if the first time is low while the
+   second time is high.
+
+   we remedy this by following documentation, and changing the subtraction into:
+      int diff;
+      if (a.tv_sec > b.tv_sec) diff = 1;
+      else if (a.tv_sec == b.tv_sec) diff = 0;
+      else diff = -1;
+
+C-x C-s
+C-x C-c
+make
+   remake the file, with the changes implemented
+
+cd ..
+coreutils-with-bug/src/ls testFolder -lt
+   re-attempt the ls, and find that wwi-armistice is now sorted correctly
+
+mv coreutils-with-bug coreutils-with-bug-2
+tar -zxvf coreutils-with-bug.tar.gz
+cd coreutils-wth-bug
+wget http://web.cs.ucla.edu/classes/winter17/cs35L/assign/coreutils.diff
+patch p0 <coreutils.diff
+./configure
+make
+   setting up to find use the diff command on the original timespec.h file
+
+

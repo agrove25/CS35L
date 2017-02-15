@@ -1,0 +1,46 @@
+df -l
+
+tmp and ~ are put on different hard drives, with different bit amount
+tmp is 64 bit, which allows it to print
+while ~ is 32 bit, which causes an underflow
+
+gdb ./ls
+run
+run -lt
+run -lt /tmp/Lab04/
+
+open ls.C
+     search for qsort (line 3034)
+     search for func decleration
+     search for compare_mtime (line 2975)
+     search for cmp_mtime (line 2877)
+
+     search for timespec_cmp (unable to find, so need to look for libraries)
+     	    grep timespec_cmp *.c
+	    grep timespec_cmp *.h
+	    grep timespec_cmp */*.h
+	    found in lib/timespec.h
+	    
+     seach fro cmp
+
+open lib/timespec.h
+     find timespec_cmp
+     problem lies here
+
+corresponding gdb
+     break ls.c:3034
+     watch func
+     display func
+
+
+sorting the encrypted file, not the decryted file :/
+   therefore, decrypt within the sort.c, but only the lines necessary to compare
+   then qsort?
+   qsrt(__, __, __, __), where the first three is list of encrypted strings and fourth is func
+   func has to compare encrypted strings (str1, str2)
+   int comp(const void *a, const void *b)
+       char *sa = (char**)a
+       char *sb = (char**)b
+
+       // then we compare XOR42 values sa[i] and sb[i]
+   newline is space, break the file between all the spaces

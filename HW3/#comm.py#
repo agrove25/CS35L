@@ -1,0 +1,113 @@
+#!/usr/bin/python
+
+import random, sys
+from optparse import OptionParser
+
+class comm:
+    def __init__(self, printF1, printF2, printF3, sorted, args):
+        self.printF1 = printF1;
+        self.printF2 = printF2;
+        self.printF3 = printF3;
+        self.sorted = sorted;
+
+        if (args[0] == "-"):
+            self.file1 = readlines();
+        else:
+            f = open(args[0], 'r')
+            self.file1 = f.readlines()
+            f.close()
+
+        if (args[1] == "-"):
+            self.file2 = readlines();
+        else:
+            f = open(args[1], 'r');
+            self.file2 = f.readlines()
+            f.close()
+
+        return
+    
+    def sortedCompare(self):
+        i = 0;
+        j = 0;
+
+        spacingF2 = ""
+        spacingF3 = ""
+        if (self.printF1 == True):
+            spacingF2 += "\t"
+            spacingF3 += "\t"
+        if (self.printF2 == True):
+            spacingF3 += "\t"
+
+        while i < len(self.file1) or  j < len(self.file2):
+            line1 = None;
+            line2 = None;
+
+            if (i < len(self.file1)):
+                line1 = self.file1[i]
+            if (j < len(self.file2)):
+                line2 = self.file2[j]
+            
+            if (line1 != None and line2 != None and line1 == line2 and self.printF3 == True):
+                print(spacingF3+self.file1[i])
+                i += 1;
+                j += 1;
+            elif (line2 == None or (line1 == None and line1 < line2 and self.printF1 == True)):
+                print(self.file1[i])
+                i += 1;
+            elif (line1 == None or (line2 == None and line1 > line2 and self.printF2 == True)):
+                print(spacingF2+self.file2[j])
+                j += 1;
+
+        return
+            
+
+def main():
+    parser = OptionParser()
+    parser.add_option("-1",
+                      action="store_false",
+                      dest="f1",
+                      default=True,
+                      help="supress colmun 1 (lines unique to FILE1)");
+
+    parser.add_option("-2",
+                      action="store_false",
+                      dest="f2",
+                      default=True,
+                      help="supress column 2 (lines unique to FILE2");
+    
+    parser.add_option("-3",
+                      action="store_false",
+                      dest="f3",
+                      default=True,
+                      help="supress column 3 (lines unique to FILE3");
+    parser.add_option("-u",
+                      action="store_false",
+                      dest="sort",
+                      default=True,
+                      help="compares two unsorted docs")
+    
+    (options, args) = parser.parse_args()
+
+    printF1 = options.f1
+    printF2 = options.f2
+    printF3 = options.f3
+    sort = options.sort
+    
+    if len(args) != 2:
+        parser.error("missing operand");
+
+    if args[0] == "-" and args[1] == "-":
+        paser.error("invalid inputs : there are no two stdins")
+
+    try:
+        c = comm(printF1, printF2, printF3, sort, args)
+    except OSError as err:
+        parser.error("OS Error: {0}".format(err))
+
+    c.sortedCompare();
+
+    print("no u rnt insane this is actually running")
+
+if __name__ == "__main__":
+    # runs the main comamnd when executed from the command line (as the main program)
+    main()

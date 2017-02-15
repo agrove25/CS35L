@@ -1,0 +1,179 @@
+Primitive Spell Checker:
+
+tr -c 'A-Za-z' '[\n*]'		:: replaces all alphabetic chars to a 
+				   newline char. In this way, it parses 
+				   words and put each word on a respective 
+				   row.
+
+tr -cs 'A-Za-z' '[\n*]'		:: does the above, but also gets rid of 
+				   duplicate \n gets rid of all the excess 
+				   new lines, leaving a word per row.
+
+tr -cs 'A-Za-z' '[\n*]' | sort	     :: sorts the above output, in 
+					alphabetical order
+
+tr -cs 'A-Za-z' '[\n*]' | sort -s    :: removes the duplicates from 
+					above output
+
+tr -cs 'A-Za-z' '[\n*]' | sort -u | comm - words ::
+   compares the previous command with a file named words.
+   this is formatted in such a way that there are three columns, 
+   named A B and C
+   
+   A is all the words that are part of the first file input, 
+	but not the second
+   B is all the words that are in the words file, 
+	but not in the first file
+   C is all the words that are present in both
+
+tr -cs 'A-Za-z' '[\n*]' | sort -u | comm -23 - words ::
+   does the above, but removes columns B and C
+   as such, it leaves only words that are part of the first file 
+   input but
+
+
+Parsing the English - Hawaiian Dictionary:
+
+
+cat hwnwdseng.htm | grep td
+    only allows rows that has the word td within it
+
+
+cat hwnwdseng.htm | grep td | sed "s/<[^>]*>//g"
+    removes all (/g) instances of < (<)
+    removes all (/g) chars except > until > ([^>]*)
+    removes all (/g) instances of > (>)
+
+cat hwnwdseng.htm | grep td | sed "s/<[^>]*>//g" | sed 's/^ *//; s/
+*$//'
+	removes all spaces from the beginning of the line (s/^ */)
+    	removes all spaces at the end of the line (s/ *$//)
+
+cat hwnwdseng.htm | grep td | sed "s/<[^>]*>//g" | sed 's/^ *//; s/
+*$//' | grep . |
+      only allows rows that begins with a character (removes extra
+      lines)
+
+cat hwnwdseng.htm | grep td | sed "s/<[^>]*>//g" | sed 's/^ *//; s/
+*$//' | grep . | sed -n 'n;p'
+      do not print by default (-n)
+      read the next line (n)
+      print out that line (p)
+
+cat hwnwdseng.htm | grep td | sed "s/<[^>]*>//g" | sed 's/^ *//; s/
+*$//' | grep . | sed -n 'n;p' | sed '1,2d' | sed "s/\`/\'/g" | tr
+'[:upper:]' '[:lower:]' | sort -u > hwnDictionary.txt
+      deletes row 1 and 2
+      replaces all ` with '
+      converts uppercase to lowercase
+      sorts in alphabetical order
+      saves file as hwnDictionary.txt
+
+cat hwnwdseng.htm | grep td | sed "s/<[^>]*>//g" | sed 's/^
+*//;s/*$//' | grep . | sed -n 'n;p' | sed '1,2d' | sed
+"s/\`/\'/g" | tr '[:upper:]' '[:lower:]' | grep -v
+[^pk\'mnwlhaeiou\ ] | sed "s/[^pk\'mnwlhaeiou]/\n/g" | grep . |
+sort -u     
+     removes all invalid characters and seperates them
+     removes duplicates
+
+Shell-scripting
+
+#!/bin/sh
+
+cat | grep td | sed "s/<[^>]*>//g" | sed 's/^ *//; s/*$//' | grep . |
+sed -n 'n;p' | sed '1,2d' | sed "s/\`/\'/g" | tr '[:upper:]'
+'[:lower:]' | sed "s/[^pk\'mnwlhaeiou]/\n/g" | grep . | sort -u
+
+Final Spell-Check
+
+cat assign2.html | tr -cs "A-Za-z'" '[\n*]' | tr '[:upper:]'
+'[:lower:]' | sort -u | comm -23 - hwords.txt | tr -cs "A-Za-z"
+'[\n*]' | sort -u | comm -23 -_words | wc -l
+	compares the initial with hwords
+	compares the nonmatched words in hwords with sorted_words
+	outputs the amount of lines
+
+	Answer: 32
+
+words correctly spelled in Hawaiian but not in English:
+      wiki
+
+
+words correctly spelled in English but not in Hawaiian:
+      ex. shown
+      ex. rather
+      etc.
+
+
+Note on the sameln.sh
+
+A bug I encountered when working on the sameln.sh that I was not
+able to resolve was when there was a '\n' within the filename. After
+spending a large amount of time researching the issue and trying to
+figure out where the problem lied, I realized that this issue came
+about due to the limitations of the sh language. My largest issue was
+that I was not able to echo nor printf a '\n' literal. I developed the
+code below, which works completely correctly, to the best of my
+knowledge, under the bash script. To change it to work with bash, all
+that is required are three changes. Firstly, to replace line 1 with
+bash instead of sh. Secondly, to put $ into the variable that combines
+file_list and file_list2. This would cause the script to look like
+file_list="$file_list"$"\n""$file_list2"$"\n".
+
+#!/bin/sh
+
+# to run this program, feed a stdinput of a directory. ex: echo ~/testFolder
+
+read directory
+cd "$directory"
+
+# lists and sorts the directory and only accepts regular files, having hidden files go first
+file_list=`find . -maxdepth 1 -type f | sed "s/.\//\//g" | grep ^'/\.' | sort`
+file_list2=`find . -maxdepth 1 -type f | sed "s/.\//\//g" | grep -v ^'/\.' | sort`
+file_list="$file_list"'\n'"$file_list2"'\n'
+
+printf "$file_list"
+
+IFS=$'/'
+
+fullCount=0
+# loops through file_list and assigns each line to var a_file
+# printf "$file_list" | while read -r a_file
+for a_file in $file_list
+do
+    a_file=`echo "$a_file" | sed "s/'\n$'//"`
+    fullCount=$((fullCount+1));
+    currentCount=0;
+
+    # loops through file_list and assigns each line to var b_file
+    # printf "$file_list" | while read -r b_file
+    for b_file in $file_list
+    do
+	b_file=`echo "$b_file" | sed "s/'\n$'//" | sed "s/'\\'/'\\\\'/g"`
+	currentCount=$((currentCount+1));
+
+	# makes sure that each checked combination is unique (haven't been done before)
+	if `test $currentCount -gt $fullCount`
+	then
+	    echo "Comparing $a_file and $b_file"
+	    # checks if a_file and b_file are the same
+	    if `cmp "$a_file" "$b_file"` 
+	    then
+		echo $a_file
+		a_fileIndex=`stat -c '%i' "$a_file"`
+		b_fileIndex=`stat -c '%i' "$b_file"`
+
+		# checks if a_file and b_file share the same inode. If not then continue...
+		if [ $a_fileIndex -ne $b_fileIndex ]
+		then
+		    # all the program actually does. removes the file that is lower ranked (in the above sort) and adds a link to the higherwhere ranked one
+		    rm "$b_file"
+		    ln "$a_file" "$b_file"
+		    
+		fi
+	    fi
+	fi
+    done
+done
+

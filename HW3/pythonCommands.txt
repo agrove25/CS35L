@@ -1,0 +1,10 @@
+sorting an array:
+
+a=[13,5,2,3,6,8,7]
+sorted(a)
+
+list01=[]
+f=open("assign3.html")
+for line in f:
+    print(line.strip())
+    list01+=[line]

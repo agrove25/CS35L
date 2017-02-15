@@ -1,0 +1,4 @@
+time (cat file | tr 'ab' 'cd)
+
+strace -o strace_buf_output ./tr2b from to < test
+strace -o strace_unbuf_output ./tr2u from to < test
