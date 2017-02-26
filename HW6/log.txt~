@@ -1,0 +1,8 @@
+Creating the 10,000,000 floating point number file:
+
+od -tf -N 80000000 < /dev/urandom |
+sed s/"^[0-9]* *"// |
+sed "s/  */ /g" |
+tr ' ' '\n' > test
+
+"od -tf -N 80000000 < /dev/urandom" : takes 80000000 bytes of data, i.e. 

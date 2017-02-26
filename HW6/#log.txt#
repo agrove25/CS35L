@@ -1,0 +1,25 @@
+Creating the 10,000,000 floating point number file:
+
+od -tf -N 80000000 < /dev/urandom |
+sed s/"^[0-9]* *"// |
+sed "s/  */ /g" |
+tr ' ' '\n' > test
+
+"od -tf -N 80000000 < /dev/urandom" : takes 80000000 bytes of data, i.e. 10000000 * 8
+    bytes per float, from the urandom file, formatting them in textdump format
+
+"sed s/"^[0-9]* *"//" : removes the byte index from each beginning of the file (along
+   with unecessary spaces)
+
+"sed "s/  */ /g" : removes all spaces, replacing them with just a single space
+
+"tr ' ' '\n' > test" : replaces all spaces (of which there is only onee of between
+   numbers) with a newline
+
+
+Testing the sort function:
+
+sort --version
+   done to ensure that the sort version is >= 8.6, which would enablee the useof
+   multithreading
+
