@@ -1,0 +1,112 @@
+to create the 5mb random file:
+   head -c 5M </dev/urandom >sampleFile
+
+Copying one file to another file --
+
+strace -o output -c ./tr2b "abc" "xxx" <sampleFile.txt >dump:
+
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0      1282           read
+  0.00    0.000000           0      1280           write
+  0.00    0.000000           0         2           open
+  0.00    0.000000           0         2           close
+  0.00    0.000000           0         4           fstat
+  0.00    0.000000           0         8           mmap
+  0.00    0.000000           0         4           mprotect
+  0.00    0.000000           0         1           munmap
+  0.00    0.000000           0         3           brk
+  0.00    0.000000           0         3         3 access
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           arch_prctl
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000                  2591         3 total
+
+-- this is the output file for the strace. As we can see the number of
+-- system calls is relatively low compared to..
+
+strace -o output -c ./tr2u "abc" "xxx" <sampleFile.txt >dump:
+
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 50.49    0.042143           0   5242882           read
+ 49.51    0.041329           0   5242880           write
+  0.00    0.000000           0         2           open
+  0.00    0.000000           0         2           close
+  0.00    0.000000           0         2           fstat
+  0.00    0.000000           0         8           mmap
+  0.00    0.000000           0         4           mprotect
+  0.00    0.000000           0         1           munmap
+  0.00    0.000000           0         1           brk
+  0.00    0.000000           0         3         3 access
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           arch_prctl
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.083472              10485787         3 total
+
+-- where the system calls number in the millions. This is due to the
+-- buffering mechanism that is inherent in the getchar and putchar
+-- methods, as opposed to directly calling the system.
+
+Copying one file directly to the terminal
+
+strace -o output -c ./tr2b "abc" "xxx" <sampleFile.txt
+
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.001125           0     20971           write
+  0.00    0.000000           0      1282           read
+  0.00    0.000000           0         2           open
+  0.00    0.000000           0         2           close
+  0.00    0.000000           0         4           fstat
+  0.00    0.000000           0         8           mmap
+  0.00    0.000000           0         4           mprotect
+  0.00    0.000000           0         1           munmap
+  0.00    0.000000           0         3           brk
+  0.00    0.000000           0         3         3 access
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           arch_prctl
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.001125                 22282         3 total
+
+strace -o output -c ./tr2u "abc" "xxx" < sampleFile.txt
+
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 57.92    0.116547           0   5242880           write
+ 42.08    0.084658           0   5242882           read
+  0.00    0.000000           0         2           open
+  0.00    0.000000           0         2           close
+  0.00    0.000000           0         2           fstat
+  0.00    0.000000           0         8           mmap
+  0.00    0.000000           0         4           mprotect
+  0.00    0.000000           0         1           munmap
+  0.00    0.000000           0         1           brk
+  0.00    0.000000           0         3         3 access
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           arch_prctl
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.201205              10485787         3 total
+
+-- like in the prevous, we can see that using ./tr2u uses much more
+-- system calls as opposed to ./tr2b, due to the buffering mechanism
+-- additionally, we can see that outputting to the terminal itself
+-- usually takes more system calls.
+
+Time taken:
+
+time ./tr2b "abc" "xxx" < sampleFile.txt > dump
+
+real 0m0.238s
+user 0m0.136s
+sys  0m0.012s
+
+time ./tr2u "abc" "xxx" < sampleFile.txt > dump
+
+real 0m5.170s
+user 0m0.308s
+sys  0m4.508s
+
+-- the time taken supports our earlier findings, where using the buffered
+-- putchar and getchar is much more efficient in time as compared with
+-- using direct system calls.

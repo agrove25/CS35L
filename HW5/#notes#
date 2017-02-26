@@ -4,3 +4,7 @@ strace -o strace_buf_output ./tr2b from to < test
 strace -o strace_unbuf_output ./tr2u from to < test
 
 encrypted text | tr (v decrypt) | sort | tr (encrypt)
+write a shell script for xor42?
+[0-255] [xor42(0-255)]
+something abt for loop?
+

@@ -1,0 +1,4 @@
+execve("./tr2b", ["./tr2b", "eif", "xxx"], [/* 64 vars */]) = -1 ENOEXEC (Exec format error)
+write(2, "strace: exec: Exec format error\n", 32) = 32
+exit_group(1)                           = ?
++++ exited with 1 +++

@@ -1,0 +1,42 @@
+We used sampleFile as a randommly created 5MB file. (the same one as the previously used file)
+
+time ./sfrob < sampleFile > dump
+
+real 0m0.195s
+user 0m0.120s
+sys  0m0.004s
+
+time ./sfrobu < sampleFile > dump
+
+real 0m0.142s
+user 0m0.052s
+sys  0m0.020s
+
+time ./sfrobs.sh < sampleFile > dump
+
+real  0m0.305s
+user  0m0.172s
+sys   0m0.008s
+
+We can see from these tests that when given an input file, that the system
+call sfrob is about the same speed as normal sfrob. This might happen because
+of optimizatons in the program itself however, as it takes much longer system time.
+If optimized, it is probable that ./sfrob is faster than ./sfrobu.
+
+We also can see that the sh file take much longer. This is probably because it
+has to translate all the characters between xor42, which would naturally take longer.
+
+time ./sfrobu -f < sampleFile > dump
+
+real 0m0.153s
+user 0m0.056s
+sys  0m0.016s
+
+time ./sfrobs.sh -f < sampleFile > dump
+
+real  0m0.391s
+user  0m0.312s
+sys   0m0.000s
+
+This confirms our analysis of the previous cases. We can see that ./sfrobs takes
+longer due to having to translate each character twice (there and back).

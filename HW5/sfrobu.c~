@@ -1,0 +1,176 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/stat.h>
+#include <string.h>
+#include <limits.h>
+#include <ctype.h>
+
+int optf = 0;
+
+int frobcmp(const char* a, const char* b) {
+  // loops through c string a and b, comparing each character to each other
+  
+  for (;; a++, b++) {
+    char x = *a;
+    char y = *b;
+    
+    if (optf == 1) {
+      if (x < UCHAR_MAX && x > 0)
+	x = toupper(x);
+      if (y < UCHAR_MAX && y > 0)
+	y = toupper(y);
+    }
+    
+    if (x == ' ' && y == ' ') return 0;
+    else if (x == ' ' || (x^42) < (y^42)) return -1;
+    else if (y == ' ' || (x^42) > (y^42)) return 1;
+  } 
+}  
+
+int cmp(const void *one, const void *two) {
+  // passes the correct data structures into frobcmp (from void* to char*)
+  
+  const char* a = *(const char**)one;
+  const char* b = *(const char**)two;
+  return frobcmp(a, b); 
+}
+
+// returns 1 if file is regular and was read
+// returns 0 if file is not a regular file
+// returns -1 if an error occured
+long int readFile(char** rawInput) {
+  // init fstat
+  struct stat fileStat;
+  if (fstat(0, &fileStat) < 0) {
+    fprintf(stderr, "fstat error/n");
+    exit(1);
+  }
+
+  if (S_ISREG(fileStat.st_mode)) {
+    *rawInput = (char*)malloc(fileStat.st_size*sizeof(char));
+    int end = 1;
+    int f;
+    for (f = 0; end != 0; f++) {
+      end = read(0, (*rawInput)+f, 1);
+    }
+
+    //end = read(0, *rawInput, fileStat.st_size+1);
+    
+    printf("%i", end);
+
+    while (end != 0) {
+      struct stat growingFileStat;
+      if (fstat(0, &growingFileStat) < 0) {
+	fprintf(stderr, "fstat error/n");
+	exit(1);
+      }
+
+      *rawInput = realloc(*rawInput, growingFileStat.st_size*sizeof(char));
+      if (rawInput == NULL) {
+	fprintf(stderr, "realloc error/n");
+	exit(1);
+      }
+
+      end = read(0, (*rawInput)+fileStat.st_size,
+		 growingFileStat.st_size - fileStat.st_size);
+      fileStat = growingFileStat;
+    }
+
+    return fileStat.st_size;
+  }
+  else {
+    *rawInput = (char*)malloc(sizeof(char));
+    int end = read(0, *rawInput, 1);
+    int i;
+    
+    for (i = 1; end != 0; i++) {
+      end = read(0, *rawInput+i, 1);
+      if (end == 0) break;
+      
+      *rawInput = realloc(*rawInput, (i+1)*sizeof(char));
+      fprintf(stderr, "%i\n", i);
+      if (*rawInput == NULL) {
+	fprintf(stderr, "realloc error/n");
+	exit(1);
+      }
+     
+      
+    }    
+    
+    return i;
+  }
+}
+
+char** parseString(const char* input, char delimiter, int* wordsSize, long int size) {
+  char** words;
+  long int inputSize = size;
+  long int numberOfWords = 0;
+  
+  for (long int i = 0; i < inputSize; i++) 
+    if (input[i] == delimiter) { 
+      numberOfWords++;
+      while (i != inputSize-1 && input[i] == input[i+1]) i++;
+    }
+
+  //if (input[inputSize-1] != delimiter) numberOfWords++;
+  numberOfWords++;
+  
+  words = (char**)malloc(numberOfWords*sizeof(char*));
+  
+  int lastSpace = 0;
+  int wordCount = 0;
+  for (long int i = 0; i < inputSize; i++) {
+    if (input[i] == delimiter || i == inputSize-1) {
+      words[wordCount] = (char*)malloc((i-lastSpace)*sizeof(char));
+      strncpy(words[wordCount], input+lastSpace, i-lastSpace);
+
+      while (i != inputSize-1 && input[i] == input[i+1])
+	i++;
+      
+      lastSpace = i+1;
+      wordCount++;
+    }
+  }
+
+  if (input[inputSize-1] != delimiter) {
+    words[wordCount] = (char*)malloc((inputSize-lastSpace)*sizeof(char));
+    strncpy(words[wordCount], input+lastSpace, inputSize-lastSpace);
+    lastSpace = inputSize;
+    wordCount++;
+  }
+
+  *wordsSize = wordCount;
+
+  return words;
+  
+}
+
+int main(int argc, char* argv[]) {
+  // setting optional arguments
+  for (int i = 1; i < argc; i++) {
+    if (strcmp("-f", argv[i]) == 0)
+      optf = 1;
+    else {
+      fprintf(stderr, "invalid option/n");
+      exit(1);
+    }
+  }
+
+  char* rawInput;
+  int wordsSize;
+  long int size = readFile(&rawInput);
+  //printf("%s\n", rawInput);
+  char** words = parseString(rawInput, ' ', &wordsSize, size); 
+
+  qsort(words, wordsSize, sizeof(char*), cmp);
+  
+  for (int i = 0; i < wordsSize; i++)
+    printf("%s ", words[i]);
+  
+  for (int i = 0; i < wordsSize; i++)
+    // memory deallocation
+    free(words[i]);
+  
+  free(rawInput);
+}
