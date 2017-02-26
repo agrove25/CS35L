@@ -18,6 +18,10 @@ tr ' ' '\n' > test
 
 Testing the sort command:
 
+sort --version
+   this is done to make sure that the sort version is >8.8, which would enable
+   multithreading.
+
 time sort -g test.txt > /dev/null
 
 real        0m35.248s
@@ -28,7 +32,7 @@ time sort -g --parallel=1 test.txt > /dev/null
 
 real        2m59.639s
 user        2m59.234s
-sys         0m0.403s
+sys         0m0.235s
 
 time sort -g --parallel=2 test.txt > /dev/null
 
@@ -42,8 +46,18 @@ real        0m56.306s
 user        3m11.583s
 sys         0m0.440s
 
-time sort -g --parallel=4 test.txt > /dev/null
+time sort -g --parallel=8 test.txt > /dev/null
 
 real        0m36.215s
 user        3m17.845s
 sys         0m0.533s
+
+These findings cause us to conclude three things. First, that the sort command w/o the
+usage of parallel uses the maximum amount of threads possible, in this case using 8,
+in order to speed up the process as much as possible. Secondly, each additional thread
+roughly decreases the time by half of the previous, which would make sense as we are
+doubling the amount of threads (in actuality, there is seemingly a flat amount added of
+around 6 seconds per split). Thirdly, that user time does not decrease but the sys
+time does increase after every doubling. This would indicate that the joining and splitting
+of the threads occur in sys time, althought the increase is very small.
+
