@@ -19,7 +19,7 @@ tr ' ' '\n' > test
 Testing the sort command:
 
 sort --version
-   this is done to make sure that the sort version is >8.8, which would enable
+   this is done to make sure that the sort version is >8.6, which would enable
    multithreading.
 
 time sort -g test.txt > /dev/null
