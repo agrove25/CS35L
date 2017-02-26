@@ -1,0 +1,23 @@
+time ./srt 1-test.ppm >1-test.ppm.tmp
+
+real    0m41.060s
+user    0m41.053s
+sys     0m0.002s
+
+time ./srt 2-test.ppm >2-test.ppm.tmp
+
+real    0m20.745s
+user    0m41.246s
+sys     0m0.002s
+
+time ./srt 4-test.ppm >4-test.ppm.tmp
+
+real    0m10.782s
+user    0m42.810s
+sys     0m0.002s
+
+time ./srt 8-test.ppm >8-test.ppm.tmp
+
+real    0m5.769s
+user    0m44.642s
+sys     0m0.004s
