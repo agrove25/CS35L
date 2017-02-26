@@ -16,3 +16,34 @@ tr ' ' '\n' > test
 "tr ' ' '\n' > test" : replaces all spaces (of which there is only onee of between
    numbers) with a newline
 
+Testing the sort command:
+
+time sort -g test.txt > /dev/null
+
+real        0m35.248s
+user        3m17.533s
+sys         0m0.548s
+
+time sort -g --parallel=1 test.txt > /dev/null
+
+real        2m59.639s
+user        2m59.234s
+sys         0m0.403s
+
+time sort -g --parallel=2 test.txt > /dev/null
+
+real        1m35.710s
+user        3m2.042s
+sys         0m0.367s
+
+time sort -g --parallel=4 test.txt > /dev/null
+
+real        0m56.306s
+user        3m11.583s
+sys         0m0.440s
+
+time sort -g --parallel=4 test.txt > /dev/null
+
+real        0m36.215s
+user        3m17.845s
+sys         0m0.533s
