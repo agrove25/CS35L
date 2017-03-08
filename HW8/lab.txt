@@ -1,0 +1,49 @@
+create trivial program:
+
+OUTPUT:
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+  printf("%.17g", cos(0.5));
+  return 0;
+}
+
+   this program creates the c program according to what the instructions said
+
+gcc -o trivial trivial.c
+ldd trivial
+
+OUTPUT:
+
+linux-vdso.so.1 =>  (0x00007ffeb60a4000)
+libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f22fe6b3000)
+/lib64/ld-linux-x86-64.so.2 (0x00005581f4253000)
+
+strace -o output.txt ./trivial
+emacs output.txt -nw
+
+   Dynamic Linking Relationships:
+
+   access...
+   open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+   open("/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+
+      these access and open the dynamically linked libraries that correspond with
+      what we found in our ldd.
+
+   fstat...
+
+      attempt to find size of dynamically linked files to allocate memory?
+
+   read...
+
+      reads from the "Executable and Linkable Format" which contains
+      necessary data in order to dynamically link?
+
+   close...
+
+      closes the dynamically linked files.
+
+

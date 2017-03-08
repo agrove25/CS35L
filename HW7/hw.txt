@@ -1,0 +1,32 @@
+1.
+
+If the other teams really had been observing the bytes going across
+the network, my resulting network is still secure. This is because we
+are using ssh, and the messages we send will be encryted by the
+receiver's public key. However this encryption cannot be reversed
+without the use of the receiver's private key, which is not shared
+through the network and stays local.
+
+If the other teams had also tapped our keyboards and observed our
+team's keystrokes, this would not interfere with the connection, as
+they still would not be able to access the private key. This is
+because the private key is generated through the system's own
+alogrithms, and not through user input.
+
+If however, someone had physical access to the OS, they might be able
+to access the private key that we had stored inside said OS. This
+would let the other teams have access to our network and its data,
+making it insecure.
+
+2.
+
+The gpg --verify command only matches the cleartext signature with the
+signature within the tar file. It would be trivial for someone to
+change things within the tar file and create a new keypair, signing it
+with my name, fooling the verify command to think that the file
+originated from me.
+
+To solve this, we can utilize a third party source of some kind to
+share public keys. The receiver can use this publicly posted key and
+match it with the cleartext using verify, and if the tar file was
+tampered, the verify command will say the file does not match.

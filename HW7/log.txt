@@ -1,0 +1,54 @@
+dpkg --get-selections | grep openssh
+sudo apt-get install openssh-server
+sudo apt-get install openssh-client
+
+   This was done on both computers so as to install
+   openssh (although technically, it would have sufficed
+   for the server computer to install openssh-server
+   and the client to instal openssh-client)
+
+ssh-keygen
+
+   creates the public/private rsa key pair, which I
+   created without a passphrase.
+
+Server Actions:
+
+sudo useradd -d /home/test -s test 
+
+   creates a directory named test, along with a user named test
+
+sudo passwd test
+
+   initialzes the password for the test account, which I set
+   to be password
+
+cd /home/test
+sudo mkdir .ssh
+
+   creates the ssh directory
+
+sudo chown -R test .ssh
+sudo chmod 700 .ssh
+
+   allows the test account to log into the server and gives him the
+   necessary permissions.
+
+emacs /etc/ssh/sshd.config
+
+   disabling the PasswordAuthentication
+
+Client Actions:
+
+ssh-copy-id -i test@10.0.2.15
+ssh add
+
+   This copies the public key over the server and adds the private key
+
+ssh -X test@10.0.2.15
+
+   enters the server
+
+gedit
+
+   opens gedit on the server
