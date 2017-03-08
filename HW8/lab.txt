@@ -92,65 +92,156 @@ do
 done
 
 ./ldd_run.sh > so
-sed 's/ =>.*//' < so | sed 's/(.*//' | sed 's/[[:space:]]//g' | sort -u > results
+ sed 's/(.*//' < so | sed 's/^[[:space:]]*//' | sort -u
 
-/lib64/ld-linux-x86-64.so.2
-libatk-1.0.so.0
-libatk-bridge-2.0.so.0
-libatspi.so.0
-libattica.so.0.4
-libattr.so.1
-libaudit.so.1
-libblkid.so.1
-libbz2.so.1
-libcairo-gobject.so.2
-libcairo.so.2
-libcap-ng.so.0
-libcap.so.2
-libcolordprivate.so.2
-libcolord.so.2
-libcom_err.so.2
-libcrypto.so.10
-libcrypt.so.1
-libc.so.6
-libdb-5.3.so
-libdbus-1.so.3
-libdbusmenu-qt.so.2
-libdl.so.2
-libdrm.so.2
-libdw.so.1
-libEGL.so.1
-libelf.so.1
-libexpat.so.1
-libfam.so.0
-libffi.so.6
-libfontconfig.so.1
-libfreebl3.so
-libfreetype.so.6
-libgbm.so.1
-libgcc_s.so.1
-libgdk-3.so.0
-libgdk_pixbuf-2.0.so.0
-libgio-2.0.so.0
-libgirepository-1.0.so.1
-libgjs.so.0
-libglapi.so.0
-libglib-2.0.so.0
-libGL.so.1
-libgmodule-2.0.so.0
-libgobject-2.0.so.0
-libgraphite2.so.3
-libgssapi_krb5.so.2
-libgthread-2.0.so.0
-libgtk-3.so.0
-libharfbuzz.so.0
-libhesiod.so.0
-libICE.so.6
-libidn.so.11
-libk5crypto.so.3
-libkdecore.so.5
-libkdeui.so.5
+/lib64/ld-linux-x86-64.so.2 
+libatk-1.0.so.0 => /lib64/libatk-1.0.so.0 
+libatk-bridge-2.0.so.0 => /lib64/libatk-bridge-2.0.so.0 
+libatspi.so.0 => /lib64/libatspi.so.0 
+libattica.so.0.4 => /lib64/libattica.so.0.4 
+libattr.so.1 => /lib64/libattr.so.1 
+libaudit.so.1 => /lib64/libaudit.so.1 
+libblkid.so.1 => /lib64/libblkid.so.1 
+libbz2.so.1 => /lib64/libbz2.so.1 
+libcairo-gobject.so.2 => /lib64/libcairo-gobject.so.2 
+libcairo.so.2 => /lib64/libcairo.so.2 
+libcap-ng.so.0 => /lib64/libcap-ng.so.0 
+libcap.so.2 => /lib64/libcap.so.2 
+libcolordprivate.so.2 => /lib64/libcolordprivate.so.2 
+libcolord.so.2 => /lib64/libcolord.so.2 
+libcom_err.so.2 => /lib64/libcom_err.so.2 
+libcrypto.so.10 => /lib64/libcrypto.so.10 
+libcrypt.so.1 => /lib64/libcrypt.so.1 
+libc.so.6 => /lib64/libc.so.6 
+libc.so.6 => /usr/lib64/libc.so.6 
+libdb-5.3.so => /lib64/libdb-5.3.so 
+libdbus-1.so.3 => /lib64/libdbus-1.so.3 
+libdbusmenu-qt.so.2 => /lib64/libdbusmenu-qt.so.2 
+libdl.so.2 => /lib64/libdl.so.2 
+libdrm.so.2 => /lib64/libdrm.so.2 
+libdw.so.1 => /lib64/libdw.so.1 
+libEGL.so.1 => /lib64/libEGL.so.1 
+libelf.so.1 => /lib64/libelf.so.1 
+libexpat.so.1 => /lib64/libexpat.so.1 
+libfam.so.0 => /lib64/libfam.so.0 
+libffi.so.6 => /lib64/libffi.so.6 
+libfontconfig.so.1 => /lib64/libfontconfig.so.1 
+libfreebl3.so => /lib64/libfreebl3.so 
+libfreetype.so.6 => /lib64/libfreetype.so.6 
+libgbm.so.1 => /lib64/libgbm.so.1 
+libgcc_s.so.1 => /lib64/libgcc_s.so.1 
+libgdk-3.so.0 => /lib64/libgdk-3.so.0 
+libgdk_pixbuf-2.0.so.0 => /lib64/libgdk_pixbuf-2.0.so.0 
+libgio-2.0.so.0 => /lib64/libgio-2.0.so.0 
+libgirepository-1.0.so.1 => /lib64/libgirepository-1.0.so.1 
+libgjs.so.0 => /lib64/libgjs.so.0 
+libglapi.so.0 => /lib64/libglapi.so.0 
+libglib-2.0.so.0 => /lib64/libglib-2.0.so.0 
+libGL.so.1 => /lib64/libGL.so.1 
+libgmodule-2.0.so.0 => /lib64/libgmodule-2.0.so.0 
+libgobject-2.0.so.0 => /lib64/libgobject-2.0.so.0 
+libgraphite2.so.3 => /lib64/libgraphite2.so.3 
+libgssapi_krb5.so.2 => /lib64/libgssapi_krb5.so.2 
+libgthread-2.0.so.0 => /lib64/libgthread-2.0.so.0 
+libgtk-3.so.0 => /lib64/libgtk-3.so.0 
+libharfbuzz.so.0 => /lib64/libharfbuzz.so.0 
+libhesiod.so.0 => /lib64/libhesiod.so.0 
+libICE.so.6 => /lib64/libICE.so.6 
+libidn.so.11 => /lib64/libidn.so.11 
+libk5crypto.so.3 => /lib64/libk5crypto.so.3 
+libkdecore.so.5 => /lib64/libkdecore.so.5 
+libkdeui.so.5 => /lib64/libkdeui.so.5 
+libkeyutils.so.1 => /lib64/libkeyutils.so.1 
+libkrb5.so.3 => /lib64/libkrb5.so.3 
+libkrb5support.so.0 => /lib64/libkrb5support.so.0 
+liblber-2.4.so.2 => /lib64/liblber-2.4.so.2 
+liblcms2.so.2 => /lib64/liblcms2.so.2 
+libldap-2.4.so.2 => /lib64/libldap-2.4.so.2 
+liblzma.so.5 => /lib64/liblzma.so.5 
+libmagic.so.1 => /lib64/libmagic.so.1 
+libmount.so.1 => /lib64/libmount.so.1 
+libmozjs-24.so => /lib64/libmozjs-24.so 
+libm.so.6 => /lib64/libm.so.6 
+libm.so.6 => /usr/lib64/libm.so.6 
+libncursesw.so.5 => /lib64/libncursesw.so.5 
+libnetpbm.so.11 => /lib64/libnetpbm.so.11 
+libnl-3.so.200 => /lib64/libnl-3.so.200 
+libnl-cli-3.so.200 => /lib64/libnl-cli-3.so.200 
+libnl-genl-3.so.200 => /lib64/libnl-genl-3.so.200 
+libnl-idiag-3.so.200 => /lib64/libnl-idiag-3.so.200 
+libnl-nf-3.so.200 => /lib64/libnl-nf-3.so.200 
+libnl-route-3.so.200 => /lib64/libnl-route-3.so.200 
+libnsl.so.1 => /lib64/libnsl.so.1 
+libnspr4.so => /lib64/libnspr4.so 
+libnss3.so => /lib64/libnss3.so 
+libnssutil3.so => /lib64/libnssutil3.so 
+libpam_misc.so.0 => /lib64/libpam_misc.so.0 
+libpam.so.0 => /lib64/libpam.so.0 
+libpango-1.0.so.0 => /lib64/libpango-1.0.so.0 
+libpangocairo-1.0.so.0 => /lib64/libpangocairo-1.0.so.0 
+libpangoft2-1.0.so.0 => /lib64/libpangoft2-1.0.so.0 
+libpcre.so.1 => /lib64/libpcre.so.1 
+libpixman-1.so.0 => /lib64/libpixman-1.so.0 
+libplc4.so => /lib64/libplc4.so 
+libplds4.so => /lib64/libplds4.so 
+libpng15.so.15 => /lib64/libpng15.so.15 
+libpthread.so.0 => /lib64/libpthread.so.0 
+libqca.so.2 => /lib64/libqca.so.2 
+libQtCore.so.4 => /lib64/libQtCore.so.4 
+libQtDBus.so.4 => /lib64/libQtDBus.so.4 
+libQtGui.so.4 => /lib64/libQtGui.so.4 
+libQtNetwork.so.4 => /lib64/libQtNetwork.so.4 
+libQtSvg.so.4 => /lib64/libQtSvg.so.4 
+libQtXml.so.4 => /lib64/libQtXml.so.4 
+libreadline.so.6 => /lib64/libreadline.so.6 
+libresolv.so.2 => /lib64/libresolv.so.2 
+librols.so.0 => /lib64/librols.so.0 
+librt.so.1 => /lib64/librt.so.1 
+libsasl2.so.3 => /lib64/libsasl2.so.3 
+libselinux.so.1 => /lib64/libselinux.so.1 
+libsmime3.so => /lib64/libsmime3.so 
+libSM.so.6 => /lib64/libSM.so.6 
+libssl3.so => /lib64/libssl3.so 
+libssl.so.10 => /lib64/libssl.so.10 
+libstdc++.so.6 => /lib64/libstdc++.so.6 
+libtinfo.so.5 => /lib64/libtinfo.so.5 
+libtokyocabinet.so.9 => /lib64/libtokyocabinet.so.9 
+libudev.so.1 => /lib64/libudev.so.1 
+libusal.so.0 => /lib64/libusal.so.0 
+libuuid.so.1 => /lib64/libuuid.so.1 
+libwavpack.so.1 => /usr/lib64/libwavpack.so.1 
+libwrap.so.0 => /lib64/libwrap.so.0 
+libX11.so.6 => /lib64/libX11.so.6 
+libX11-xcb.so.1 => /lib64/libX11-xcb.so.1 
+libXau.so.6 => /lib64/libXau.so.6 
+libxcb-dri2.so.0 => /lib64/libxcb-dri2.so.0 
+libxcb-dri3.so.0 => /lib64/libxcb-dri3.so.0 
+libxcb-glx.so.0 => /lib64/libxcb-glx.so.0 
+libxcb-present.so.0 => /lib64/libxcb-present.so.0 
+libxcb-randr.so.0 => /lib64/libxcb-randr.so.0 
+libxcb-render.so.0 => /lib64/libxcb-render.so.0 
+libxcb-shape.so.0 => /lib64/libxcb-shape.so.0 
+libxcb-shm.so.0 => /lib64/libxcb-shm.so.0 
+libxcb.so.1 => /lib64/libxcb.so.1 
+libxcb-sync.so.1 => /lib64/libxcb-sync.so.1 
+libxcb-xfixes.so.0 => /lib64/libxcb-xfixes.so.0 
+libXcomposite.so.1 => /lib64/libXcomposite.so.1 
+libXcursor.so.1 => /lib64/libXcursor.so.1 
+libXdamage.so.1 => /lib64/libXdamage.so.1 
+libXext.so.6 => /lib64/libXext.so.6 
+libXfixes.so.3 => /lib64/libXfixes.so.3 
+libXft.so.2 => /lib64/libXft.so.2 
+libXinerama.so.1 => /lib64/libXinerama.so.1 
+libXi.so.6 => /lib64/libXi.so.6 
+libXpm.so.4 => /lib64/libXpm.so.4 
+libXrandr.so.2 => /lib64/libXrandr.so.2 
+libXrender.so.1 => /lib64/libXrender.so.1 
+libxshmfence.so.1 => /lib64/libxshmfence.so.1 
+libXtst.so.6 => /lib64/libXtst.so.6 
+libXxf86vm.so.1 => /lib64/libXxf86vm.so.1 
+libz.so.1 => /lib64/libz.so.1 
+linux-vdso.so.1 =>  
 
    this program ldd on every single command, then gets rid of everything excess (spaces,
-   =>, and everyting after). Afterwards, it sorts everything uniquely.
+   and parentheses). Afterwards, it sorts everything uniquely.
 
