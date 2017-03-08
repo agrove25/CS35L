@@ -45,5 +45,112 @@ emacs output.txt -nw
    close...
 
       closes the dynamically linked files.
+      
+ls /usr/bin | awk 'NR%101==304785991%101'
 
+OUTPUT:
+
+abrt-action-analyze-core
+at
+cd-fix-profile
+cpio
+db_tuner
+edid-decode
+font2c
+gjs
+gsnd
+hpcups-update-ppds
+interdiff
+kde4-doxygen.sh
+ktelnetservice
+lppasswd
+mkisofs
+nf-monitor
+open
+pamtilt
+pbmtozinc
+pinentry-curses
+pnmquant
+ppmglobe
+pygtk-demo
+rmail.sendmail
+sed
+splain
+tcbmttest
+umount
+wvunpack
+xtrace
+
+create a program to ldd each of the above:
+
+#!/bin/bash
+
+for x in "$(ls /usr/bin | awk 'NR%101==304785991%101')"
+do
+    y=`which $x`
+    ldd $y
+done
+
+./ldd_run.sh > so
+sed 's/ =>.*//' < so | sed 's/(.*//' | sed 's/[[:space:]]//g' | sort -u > results
+
+/lib64/ld-linux-x86-64.so.2
+libatk-1.0.so.0
+libatk-bridge-2.0.so.0
+libatspi.so.0
+libattica.so.0.4
+libattr.so.1
+libaudit.so.1
+libblkid.so.1
+libbz2.so.1
+libcairo-gobject.so.2
+libcairo.so.2
+libcap-ng.so.0
+libcap.so.2
+libcolordprivate.so.2
+libcolord.so.2
+libcom_err.so.2
+libcrypto.so.10
+libcrypt.so.1
+libc.so.6
+libdb-5.3.so
+libdbus-1.so.3
+libdbusmenu-qt.so.2
+libdl.so.2
+libdrm.so.2
+libdw.so.1
+libEGL.so.1
+libelf.so.1
+libexpat.so.1
+libfam.so.0
+libffi.so.6
+libfontconfig.so.1
+libfreebl3.so
+libfreetype.so.6
+libgbm.so.1
+libgcc_s.so.1
+libgdk-3.so.0
+libgdk_pixbuf-2.0.so.0
+libgio-2.0.so.0
+libgirepository-1.0.so.1
+libgjs.so.0
+libglapi.so.0
+libglib-2.0.so.0
+libGL.so.1
+libgmodule-2.0.so.0
+libgobject-2.0.so.0
+libgraphite2.so.3
+libgssapi_krb5.so.2
+libgthread-2.0.so.0
+libgtk-3.so.0
+libharfbuzz.so.0
+libhesiod.so.0
+libICE.so.6
+libidn.so.11
+libk5crypto.so.3
+libkdecore.so.5
+libkdeui.so.5
+
+   this program ldd on every single command, then gets rid of everything excess (spaces,
+   =>, and everyting after). Afterwards, it sorts everything uniquely.
 
