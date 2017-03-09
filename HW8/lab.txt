@@ -91,8 +91,8 @@ do
     ldd $y
 done
 
-./ldd_run.sh > so
- sed 's/(.*//' < so | sed 's/^[[:space:]]*//' | sort -u
+./ldd_run.sh | grep so > so
+sed 's/(.*//' < so | sed 's/^[[:space:]]*//' | sort -u
 
 /lib64/ld-linux-x86-64.so.2 
 libatk-1.0.so.0 => /lib64/libatk-1.0.so.0 
@@ -244,4 +244,7 @@ linux-vdso.so.1 =>
 
    this program ldd on every single command, then gets rid of everything excess (spaces,
    and parentheses). Afterwards, it sorts everything uniquely.
+
+   Some files are not able to be ldd'd because they are not executables, with some being
+   Bourne scripts and some being Python scripts.
 

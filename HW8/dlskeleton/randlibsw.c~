@@ -1,0 +1,55 @@
+#include "randlib.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+/* Input stream containing random bytes.  */
+static FILE *urandstream;
+
+/* Initialize the software rand64 implementation.  */
+__attribute__ ((constructor))
+static void
+software_rand64_init (void)
+{
+  urandstream = fopen ("/dev/urandom", "r");
+  if (! urandstream)
+    abort ();
+}
+
+/* Return a random value, using software operations.  */
+static unsigned long long
+software_rand64 (void)
+{
+  unsigned long long int x;
+  if (fread (&x, sizeof x, 1, urandstream) != 1)
+    abort ();
+  return x;
+}
+
+/* Finalize the software rand64 implementation.  */
+__attribute__ ((destructor))
+static void
+software_rand64_fini (void)
+{
+  fclose (urandstream);
+}
+
+static bool
+writebytes (unsigned long long x, int nbytes)
+{
+  int ndigits = nbytes * 2;
+  do
+    {
+      if (putchar ("0123456789abcdef"[x & 0xf]) < 0)
+	return false;
+      x >>= 4;
+      ndigits--;
+    }
+  while (0 < ndigits);
+
+  return 0 <= putchar ('\n');
+}
+
+extern unsigned long long rand64 (void) {
+  return software_rand64();
+}
