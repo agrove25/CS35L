@@ -1,0 +1,43 @@
+git checkout v3.0 -b 'quote
+    switches the working version to v3.0
+    also creates a new branch to work on called quote
+
+patch -p1 < ../quote-3.0-patch.txt
+    patches the file from the changes made in the lab
+
+emacs
+C-x 4 a
+   allows us to edit the ChangeLog entry to a given message
+
+git add .
+git commit -F ChangeLog
+   commit the changes to the currently worked on branch
+   with the ChangeLog as the message
+
+git format-patch -1 --stdout > ../formatted-patch.txt
+   creates the formatted-patch.txt file that was required of us
+
+git checkout -f v3.0
+git checkout -b partner
+    creates a clean copy of the v3.0
+    switches to a new branch called partner
+
+git am < ../formatted-patch.txt
+    patches my hw with my partner's file
+
+./bootstrap
+patch -p0 ../diffutils-gets.diff
+./configure
+make
+make install
+   verifies that everything works
+
+make distdir
+emacs ChangeLog
+   verifies that the change my partner made was done correctly
+
+ssh -X grovea@lnxsrv09.seas.ucla.edu
+cd ~eggert/src/gnu/emacs
+/usr/local/cs/bin/gitk
+    opens the gitk window (a window wthat shows the previous commits
+    that has been made on this project)

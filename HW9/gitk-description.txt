@@ -1,0 +1,8 @@
+Top-left window:	commit message (usually a description of the changes)
+	 		also, a tree hiearchy on the right graphically showing the branches
+			and merges that have taken place.
+			
+Top-middle window:	name and email address of the one who commit the changes
+Top-right window:	date of the commit
+Bottom-left window:	the changelog of the commits
+Bottom-right window:	the impacted files
